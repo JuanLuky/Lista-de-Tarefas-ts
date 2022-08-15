@@ -4,6 +4,7 @@
 
 
 ## Tecnologias Usadas 👨‍💻
+* Vite
 * React
 * TypeScript
 * CSS Modules
