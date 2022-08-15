@@ -1,0 +1,84 @@
+.tasklistItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 16px;
+}
+.tasklistItem div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  outline: 0;
+}
+.tasklistItem div p {
+  font-size: 14px;
+  max-width: 632px;
+  width: 100%;
+  color: var(--gray-100);
+}
+.checkboxcontainer {
+  display: block;
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 18px;
+}
+.checkboxcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkboxcontainer input:checked ~ .checkmark {
+  background-color: var(--purple-dark);
+  border: none;
+}
+.checkboxcontainer input:checked ~ .checkmark::after {
+  display: block;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 3px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.tasklistItem button {
+    border: none;
+    background: none;
+    margin-top: -15px;
+    line-height: 0;
+    padding: 3px;
+}
+.tasklistItem button:hover {
+    background: var(--gray-400);
+    padding: 3px;
+    border-radius: 4px;
+}
+.tasklistItem button .trash {
+    color: var(--gray-300);
+}
+.tasklistItem button .trash:hover {
+    color: var(--red);
+}
